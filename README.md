@@ -11,8 +11,9 @@ existed; the git history shows the order.
    pre-registered rule, XY-QAOA's time-to-solution does not scale better than
    tabu search, simulated annealing or local search, in either problem family.
 2. **The QUBO itself caps any quantum advantage, independent of hardware.**
-   A *perfect* QUBO solver still picks worse sampling plans than a 1 ms greedy
-   algorithm on the real objective, at every number of crews tested.
+   On Net3 the real objective is solved *exactly* by classical MIP in a median
+   15 ms, so no QUBO solver can do better. And the QUBO's best plan is, on
+   average, worse than a 1 ms greedy algorithm at every number of crews tested.
 3. **A narrower, real result:** noiseless QAOA + quantum minimum finding scales
    better than the exact MIP solver (HiGHS) — the same kind of result as
    Shaydulin et al., *Sci. Adv.* 10, eadm6761 (2024). Strictly significant in
@@ -124,9 +125,20 @@ optimum reached:
 | Perfect QUBO solver, lambda = 1 (Bonferroni) | 95.5% | 90.9% | 88.3% |
 | Naive top-K ranking by v_i | 77.0% | 80.6% | 88.6% |
 
-A quantum device that solved the QUBO perfectly would still choose worse plans
-than greedy, at every K. The pairwise form discards the higher-order overlaps
-that greedy uses directly. At lambda = 1 the Bonferroni bound saturates around
+**Read this carefully — it is an average, not every case.** Across 135
+event x K x lambda combinations, the QUBO's best plan beat greedy 8 times (all
+at K <= 5, by +0.1 to +3.3 points) and lost 108 times (by 5.5 points on
+average, up to 23.4). Even choosing the best lambda per instance in hindsight,
+the QUBO averages 98.99% against greedy's 99.38%, and wins on 6 of 45.
+
+"Perfect QUBO solver" means the proven MIP optimum in 115 of 135 runs; in the
+other 20 the MIP did not prove optimality within 20 s, and the best plan from
+its incumbent plus 10 tabu restarts was used instead.
+
+The cleaner statement: exact MIP on the *true* objective reaches 100% in a
+median 14.6 ms (max 2.6 s) on Net3. No solver of the QUBO, quantum or
+classical, can beat that. The pairwise form discards the higher-order overlaps
+the true objective keeps. At lambda = 1 the Bonferroni bound saturates around
 K = 4: past that, extra crews add as much penalty as value.
 
 ## Result 3: impact KPIs (the three Judge 7 asked for)
