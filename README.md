@@ -215,7 +215,6 @@ python experiments/e2_operational.py && python experiments/e4_large.py
 - D-Wave Advantage2: 4,400+ qubits, Zephyr, 20-way connectivity (May 2025), [Business Wire](https://www.businesswire.com/news/home/20250520948155/en/)
 - Boothby et al., Zephyr topology: cliques up to K_{16m-8}, [D-Wave report 14-1056A-A](https://www.dwavequantum.com/media/fawfas04/14-1056a-a_zephyr_topology_of_d-wave_quantum_processors.pdf)
 - Klise et al., WNTR User Manual v1.0, US EPA (2023); Chama, Sandia National Laboratories
-=======
-# AmazingTeam18
-GitHub Repository for the NYUAD Hackathon Team 18
+
+
 
