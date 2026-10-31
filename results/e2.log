@@ -1,0 +1,36 @@
+event 1/15: 44 sources, 58 sites  (92s)
+event 2/15: 31 sources, 62 sites  (154s)
+event 3/15: 21 sources, 41 sites  (192s)
+event 4/15: 20 sources, 41 sites  (231s)
+event 5/15: 26 sources, 55 sites  (317s)
+event 6/15: 20 sources, 48 sites  (352s)
+event 7/15: 22 sources, 74 sites  (405s)
+event 8/15: 26 sources, 60 sites  (466s)
+event 9/15: 23 sources, 55 sites  (564s)
+event 10/15: 22 sources, 48 sites  (626s)
+event 11/15: 22 sources, 51 sites  (708s)
+event 12/15: 20 sources, 16 sites  (709s)
+event 13/15: 20 sources, 49 sites  (765s)
+event 14/15: 32 sources, 59 sites  (821s)
+event 15/15: 20 sources, 44 sites  (897s)
+
+fraction of the TRUE optimum reached (mean over events):
+    greedy_true  gls0.5_true  sa_true  tabu_true  topk_true  qubo0.25_opt_true  qubo0.5_opt_true  qubo1.0_opt_true
+K                                                                                                                 
+3        0.9910       0.9829   0.9833     0.9822     0.7698             0.9321            0.9815            0.9548
+5        0.9925       0.9853   0.9838     0.9858     0.8055             0.9561            0.9870            0.9087
+10       0.9979       0.9586   0.9569     0.9593     0.8855             0.9914            0.9600            0.8833
+
+seconds (median):
+    t_mip_true  t_greedy_true  gls0.5_t    sa_t  tabu_t
+K                                                      
+3       0.0177         0.0007    0.0001  0.0129  0.0122
+5       0.0146         0.0009    0.0002  0.0127  0.0121
+10      0.0105         0.0011    0.0002  0.0129  0.0152
+
+KPIs (mean): P(identified) and expected candidate sources left
+    opt_pid  greedy_pid  topk_pid  rand_pid  opt_rem  greedy_rem  topk_rem  rand_rem  none_rem
+K                                                                                             
+3     0.037       0.034     0.021     0.030    5.343       5.550     9.817    11.907      24.6
+5     0.152       0.119     0.057     0.064    3.396       3.572     7.623     9.068      24.6
+10    0.436       0.399     0.164     0.152    2.282       2.341     5.046     5.977      24.6

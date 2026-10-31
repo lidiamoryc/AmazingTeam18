@@ -1,0 +1,293 @@
+[
+ {
+  "alarm": "J-252",
+  "t_alarm": 12.25,
+  "scenarios": 441,
+  "sources": 368,
+  "sites": 498,
+  "nonzero_pairs": 123753,
+  "K5": {
+   "greedy_s": 0.506,
+   "greedy_certified_pct": 90.15,
+   "greedy_vs_mip_pct": 90942.857,
+   "mip_s": 123.63,
+   "mip_proven": false,
+   "p_identified": 0.002,
+   "sources_left": 36.48,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 124749,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.52e-43
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.67e-163
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 498996,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 5.38e-172
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 997992,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "K10": {
+   "greedy_s": 0.654,
+   "greedy_certified_pct": 96.32,
+   "greedy_vs_mip_pct": 107.254,
+   "mip_s": 128.74,
+   "mip_proven": false,
+   "p_identified": 0.016,
+   "sources_left": 13.74,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 124749,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.52e-43
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.67e-163
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 498996,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 5.38e-172
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 997992,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "fits_annealer_clique": false
+ },
+ {
+  "alarm": "J-257",
+  "t_alarm": 18.25,
+  "scenarios": 434,
+  "sources": 367,
+  "sites": 559,
+  "nonzero_pairs": 155961,
+  "K5": {
+   "greedy_s": 0.487,
+   "greedy_certified_pct": 92.05,
+   "greedy_vs_mip_pct": 104.722,
+   "mip_s": 136.13,
+   "mip_proven": false,
+   "p_identified": 0.0,
+   "sources_left": 37.23,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 157079,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.22e-54
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.09e-205
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 628316,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 2.21e-216
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 1256632,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "K10": {
+   "greedy_s": 0.542,
+   "greedy_certified_pct": 96.34,
+   "greedy_vs_mip_pct": 102.946,
+   "mip_s": 122.32,
+   "mip_proven": false,
+   "p_identified": 0.005,
+   "sources_left": 14.87,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 157079,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.22e-54
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.09e-205
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 628316,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 2.21e-216
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 1256632,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "fits_annealer_clique": false
+ },
+ {
+  "alarm": "J-249",
+  "t_alarm": 9.25,
+  "scenarios": 378,
+  "sources": 366,
+  "sites": 432,
+  "nonzero_pairs": 93096,
+  "K5": {
+   "greedy_s": 0.405,
+   "greedy_certified_pct": 90.18,
+   "greedy_vs_mip_pct": 180.499,
+   "mip_s": 124.88,
+   "mip_proven": false,
+   "p_identified": 0.005,
+   "sources_left": 27.97,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 93960,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 5.63e-33
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 2.5e-123
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 375840,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1e-129
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 751680,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.01e-258
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "K10": {
+   "greedy_s": 0.517,
+   "greedy_certified_pct": 96.77,
+   "greedy_vs_mip_pct": 109.108,
+   "mip_s": 121.05,
+   "mip_proven": false,
+   "p_identified": 0.019,
+   "sources_left": 10.96,
+   "quantum": {
+    "p1": {
+     "two_qubit_gates": 93960,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 5.63e-33
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 2.5e-123
+     }
+    },
+    "p4": {
+     "two_qubit_gates": 375840,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1e-129
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    },
+    "p8": {
+     "two_qubit_gates": 751680,
+     "Quantinuum Helios (98 q)": {
+      "fits": false,
+      "circuit_fidelity": 1.01e-258
+     },
+     "IBM Heron (156 q)": {
+      "fits": false,
+      "circuit_fidelity": 0.0
+     }
+    }
+   }
+  },
+  "fits_annealer_clique": false
+ }
+]
