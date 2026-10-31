@@ -244,3 +244,41 @@ def chama_true(ev, K, solver="appsi_highs"):
     dt = time.perf_counter() - t
     sel = sorted(int(s[1:]) for s in out["Sensors"])
     return sel, float(out["Objective"]), dt
+
+
+def mip_qubo_time_to_find(q, K, target, time_limit=120.0):
+    """Same linearised MIP as mip_qubo, solved with highspy directly so the
+    improving-solution callback can record WHEN the optimum is first found
+    (time-to-find, as Shaydulin et al. use for Gurobi), not just when it is
+    proven optimal."""
+    import highspy
+    n = q.n
+    I, J = np.where(np.triu(q.R, 1) > 0)
+    P = len(I)
+    h = highspy.Highs()
+    h.setOptionValue("output_flag", False)
+    h.setOptionValue("time_limit", float(time_limit))
+    inf = highspy.kHighsInf
+    nv = n + P
+    lower = np.zeros(nv); upper = np.concatenate([np.ones(n), np.full(P, inf)])
+    cost = np.concatenate([q.v, -q.R[I, J]])
+    h.addVars(nv, lower, upper)
+    h.changeColsCost(nv, np.arange(nv, dtype=np.int32), cost)
+    h.changeObjectiveSense(highspy.ObjSense.kMaximize)
+    h.changeColsIntegrality(n, np.arange(n, dtype=np.int32),
+                            np.array([highspy.HighsVarType.kInteger] * n))
+    for k in range(P):     # x_i + x_j - y_ij <= 1
+        h.addRow(-inf, 1.0, 3, np.array([I[k], J[k], n + k], dtype=np.int32), np.array([1.0, 1.0, -1.0]))
+    h.addRow(K, K, n, np.arange(n, dtype=np.int32), np.ones(n))
+    found = {"t": None}
+    t0 = time.perf_counter()
+
+    def cb(e):
+        val = e.data_out.objective_function_value
+        if found["t"] is None and val >= target - 1e-9 * max(1.0, abs(target)):
+            found["t"] = time.perf_counter() - t0
+
+    h.cbMipImprovingSolution.subscribe(cb)
+    h.run()
+    t_prove = time.perf_counter() - t0
+    return (found["t"] if found["t"] is not None else t_prove), t_prove

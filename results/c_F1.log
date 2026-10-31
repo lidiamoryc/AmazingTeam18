@@ -1,0 +1,5 @@
+F1 n=12 K=3  greedy+LS exact on 10/12  SA hit 1.00  tabu hit 1.00  RR-LS hit 1.00  TTS(s): SA 0.00273 tabu 0.00241 RR-LS 6.67e-05 MIP 0.0376 brute 3.69e-05  (3s)
+F1 n=16 K=4  greedy+LS exact on 9/12  SA hit 1.00  tabu hit 1.00  RR-LS hit 1.00  TTS(s): SA 0.00362 tabu 0.00354 RR-LS 9.26e-05 MIP 0.0957 brute 0.000169  (5s)
+F1 n=20 K=5  greedy+LS exact on 11/12  SA hit 1.00  tabu hit 1.00  RR-LS hit 1.00  TTS(s): SA 0.00464 tabu 0.00451 RR-LS 9.86e-05 MIP 0.158 brute 0.00157  (8s)
+F1 n=24 K=6  greedy+LS exact on 10/12  SA hit 0.94  tabu hit 1.00  RR-LS hit 0.85  TTS(s): SA 0.00606 tabu 0.00523 RR-LS 0.000126 MIP 0.893 brute 0.0217  (15s)
+F1 n=28 K=7  greedy+LS exact on 10/12  SA hit 0.95  tabu hit 1.00  RR-LS hit 1.00  TTS(s): SA 0.00653 tabu 0.00655 RR-LS 0.000145 MIP 1.3 brute 0.293  (28s)

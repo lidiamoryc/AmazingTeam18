@@ -1,0 +1,8 @@
+F2 n=12 K=5 dim=     792  P(opt) uniform=7.58e-03  mean-angle p8=1.72e-02  donor p1=3.69e-02 p4=8.67e-02 p8=9.39e-02  optimised p8=1.74e-01  (27s)
+F2 n=16 K=5 dim=   4,368  P(opt) uniform=1.83e-03  mean-angle p8=3.13e-03  donor p1=9.47e-03 p4=2.57e-02 p8=4.51e-02  optimised p8=7.17e-02  (75s)
+F2 n=20 K=5 dim=  15,504  P(opt) uniform=7.09e-04  mean-angle p8=4.46e-04  donor p1=1.91e-03 p4=2.46e-03 p8=8.60e-03  optimised p8=1.60e-02  (238s)
+F2 n=24 K=5 dim=  42,504  P(opt) uniform=1.41e-04  mean-angle p8=1.88e-04  donor p1=5.78e-04 p4=2.26e-03 p8=3.75e-03  (1s)
+F2 n=28 K=5 dim=  98,280  P(opt) uniform=3.05e-04  mean-angle p8=4.24e-04  donor p1=1.44e-03 p4=4.17e-03 p8=1.12e-02  (3s)
+F2 n=32 K=5 dim= 201,376  P(opt) uniform=7.45e-05  mean-angle p8=1.26e-04  donor p1=3.37e-04 p4=9.82e-04 p8=1.53e-03  (7s)
+F2 n=36 K=5 dim= 376,992  P(opt) uniform=3.98e-05  mean-angle p8=1.11e-04  donor p1=1.50e-04 p4=7.93e-04 p8=2.20e-03  (17s)
+F2 n=40 K=5 dim= 658,008  P(opt) uniform=4.33e-05  mean-angle p8=4.25e-05  donor p1=1.81e-04 p4=6.62e-04 p8=1.48e-03  (31s)
