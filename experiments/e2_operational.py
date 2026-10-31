@@ -18,7 +18,7 @@ from qadv import classical as cl, instances as ins, objective as ob
 
 KS = [3, 5, 10]
 LAMS = [0.25, 0.5, 1.0]
-N_EVENTS = 20
+N_EVENTS = 15
 
 if __name__ == "__main__":
     _, test = ins.split_pool(ins.event_pool())
@@ -40,9 +40,17 @@ if __name__ == "__main__":
             row["greedy_true"] = rel(A)
             for lam in LAMS:
                 q = cl.Qubo(v, r, lam)
-                Aq, _, tq, okq = cl.mip_qubo(q, K, time_limit=300)
+                Aq, vq, tq, okq = cl.mip_qubo(q, K, time_limit=20)
+                # if the MIP is not proven within 20 s, use the best of its
+                # incumbent and 10 tabu restarts as the QUBO optimum (flagged)
+                if not okq:
+                    for _ in range(10):
+                        At = cl.tabu(q, K, rng, iters=8 * ev.n)
+                        if Aq is None or q.value(At) > q.value(Aq) + 1e-12:
+                            Aq = At
                 row[f"qubo{lam}_opt_true"] = rel(Aq)
                 row[f"t_mip_qubo{lam}"] = tq
+                row[f"mip_qubo{lam}_proven"] = int(okq)
                 t = time.perf_counter(); Ag = cl.local_search(q, cl.greedy_qubo(q, K))
                 row[f"gls{lam}_t"] = time.perf_counter() - t
                 row[f"gls{lam}_true"] = rel(Ag)
